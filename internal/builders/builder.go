@@ -6,6 +6,7 @@ import (
 )
 
 type Builder interface {
+	Namespace() apiv1.Namespace
 	StatefulSet() v1.StatefulSet
 	PersistentVolumeClaim() apiv1.PersistentVolumeClaim
 	PersistentVolume() apiv1.PersistentVolume
